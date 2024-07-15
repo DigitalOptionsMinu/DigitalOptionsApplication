@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import React from 'react';
+import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
@@ -7,28 +6,39 @@ import './Login.css';
 import Logo from '../../images/logoalb.png';
 import { Link } from "react-router-dom";
 import { CiLogin, CiBookmarkCheck } from "react-icons/ci";
+import { UserContext } from '../context/UserContext';
 
-axios.defaults.baseURL = 'http://localhost:8000'; // Setează baza URL pentru axios
-axios.defaults.withCredentials = true; // Permite trimiterea cookie-urilor
+axios.defaults.baseURL = 'http://localhost:8000';
+axios.defaults.withCredentials = true; 
 
 export default function Login() {
   const navigate = useNavigate();
+  const { user, login } = useContext(UserContext);
   const [data, setData] = useState({
     email: '',
     password: '',
   });
 
+  useEffect(() => {
+    console.log('user')
+    console.log(user)
+    if (user) {
+      navigate('/dashboard');
+    }
+  }, [user, navigate]);
+
   const loginUser = async (e) => {
     e.preventDefault();
     const { email, password } = data;
     try {
-      const { data } = await axios.post('/login', {
+      const response = await axios.post('/login', {
         email,
         password
       });
-      if (data.error) {
-        toast.error(data.error);
+      if (response.data.error) {
+        toast.error(response.data.error);
       } else {
+        login(response.data);
         setData({});
         navigate('/dashboard');
         toast.success('Te-ai logat cu succes!');
