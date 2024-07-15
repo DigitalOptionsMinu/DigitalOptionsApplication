@@ -1,0 +1,134 @@
+.sectionLogin {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../images/backgroundapp.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formLogin {
+    background: rgba(255, 255, 255, 0.27); /* fundal alb semi-transparent */
+    padding: 3em;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px; /* sau altă lățime dorită */
+    text-align: center;
+}
+
+.formLogin input {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formLogin button {
+    width: 105%;
+    padding: 0.5em;
+    background-color: #EE8228;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.logoDigitalOptions{
+    width: 300px;
+    margin-top: -200px;
+    margin-bottom: 30px;
+}
+
+.textEmail,
+.textPassword{
+    font-size: 20px;
+    color: white;
+
+}
+
+.inputEmail{
+    color: black;
+    background-color: #1b4e3d84;
+}
+
+.autentification{
+    color: white;
+    margin-bottom: 40px;
+    margin-top: -10px;
+    font-size: 30px;
+}
+
+.textWithRegister{
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.linkReg{
+    text-decoration: none;
+    color: black;
+}
+
+
+.sectionIntro{
+    display: flex;
+}
+
+.sectionIntroLogin,
+.sectionIntroRegister{
+    width: 150px;
+    text-align: center;
+    color: white;
+    padding: 1.2em;
+    font-size: 20px;
+}
+
+.sectionIntroLogin{
+    border-radius: 20px 0px 0px 0px;
+    background: rgba(255, 255, 255, 0.27); /* fundal alb semi-transparent */
+}
+
+
+.sectionIntroRegister{
+    border-radius: 0px 20px 0px 0px;
+}
+
+
+.sectionIntroRegister:hover{
+    background: rgba(255, 255, 255, 0.27); /* fundal alb semi-transparent */
+}
+
+.iconAutentification{
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+.submit{
+    font-size: 18px;
+}
+
+.inputEmail {
+    color: white;
+    background-color: #1b4e3d84;
+    border: none;
+    border-bottom: 1px solid rgb(77, 33, 33); /* Bară de subliniere de culoare albă */
+    padding: 0.5em;
+    margin: 0.5em 0;
+    outline: none; /* Elimină conturul la focus */
+}
+
+.inputEmail:focus {
+    border-bottom: 3px solid #EE8228; /* Schimbă culoarea sublinierii la focus */
+}
+
+.textEmail,
+.textPassword {
+    font-size: 20px;
+    color: white;
+}

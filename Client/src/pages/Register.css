@@ -1,0 +1,28 @@
+.sectionIntroLogin2,
+.sectionIntroRegister2{
+    width: 150px;
+    text-align: center;
+    color: white;
+    padding: 1.2em;
+    font-size: 20px;
+}
+
+.sectionIntroLogin2{
+    border-radius: 0px 20px 0px 0px;
+    background: rgba(255, 255, 255, 0.27); /* fundal alb semi-transparent */
+}
+
+
+.sectionIntroRegister2{
+    border-radius: 20px 0px 0px 0px;
+}
+
+
+.sectionIntroRegister2:hover{
+    background: rgba(255, 255, 255, 0.27); /* fundal alb semi-transparent */
+}
+
+
+.react-tel-input .form-control{
+    background: transparent;
+}
